@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+
+    <!--    <Button-->
+<!--        android:id="@+id/buttonConfirm"-->
+<!--        android:layout_width="248dp"-->
+<!--        android:layout_height="51dp"-->
+<!--        android:layout_marginBottom="424dp"-->
+<!--        android:backgroundTint="#09bfb8"-->
+<!--        android:text="@string/confirm"-->
+<!--        app:layout_constraintBottom_toBottomOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.49"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+
+    <!--    <Button-->
+    <!--        android:id="@+id/buttonGunting"-->
+    <!--        android:layout_width="248dp"-->
+    <!--        android:layout_height="51dp"-->
+    <!--        android:layout_marginBottom="26dp"-->
+    <!--        android:backgroundTint="#09bfb8"-->
+    <!--        android:text="Gunting"-->
+    <!--        app:layout_constraintBottom_toTopOf="@+id/buttonBatu"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+    <!--    <Button-->
+    <!--        android:id="@+id/buttonKertas"-->
+    <!--        android:layout_width="248dp"-->
+    <!--        android:layout_height="51dp"-->
+    <!--        android:layout_marginBottom="328dp"-->
+    <!--        android:backgroundTint="#09bfb8"-->
+    <!--        android:text="Kertas"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.496"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/buttonBatu" />-->
+
+    <!--    <TextView-->
+<!--        android:id="@+id/textView"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:layout_marginBottom="72dp"-->
+<!--        android:text="@string/choice"-->
+<!--        android:textSize="20sp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/buttonConfirm"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.242"-->
+<!--        app:layout_constraintStart_toStartOf="parent" />-->
+
+<!--    <EditText-->
+<!--        android:id="@+id/choiceForm"-->
+<!--        android:layout_width="250dp"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:autofillHints="Gunting/kertas/batu"-->
+<!--        android:inputType=""-->
+<!--        android:minHeight="48dp"-->
+<!--        app:layout_constraintBottom_toTopOf="@+id/buttonConfirm"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintHorizontal_bias="0.503"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toBottomOf="@+id/telunjuk"-->
+<!--        app:layout_constraintVertical_bias="0.607"-->
+<!--        tools:ignore="LabelFor" />-->
+
+    <ToggleButton
+        android:id="@+id/music"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="24dp"
+        android:background="@drawable/toggle"
+        android:textOff=""
+        android:textOn=""
+        android:checked="false"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.93"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/buttonBack"
+        android:layout_width="110dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="32dp"
+        android:text="@string/go_back"
+        android:backgroundTint="#7aa6a6"
+        android:background="@drawable/rounded_button"
+        app:layout_constraintBottom_toTopOf="@+id/gunting"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.053"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+
+        android:id="@+id/gunting"
+        android:layout_width="181dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="96dp"
+        android:src="@drawable/peace"
+        android:background="@drawable/rounded_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/batu"
+        android:layout_width="181dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="280dp"
+        android:background="@drawable/rounded_button"
+        android:src="@drawable/fist"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.utils.widget.ImageFilterView
+        android:id="@+id/kertas"
+
+        android:layout_width="181dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="188dp"
+        android:background="@drawable/rounded_button"
+        android:src="@drawable/paper"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textWinner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="@string/winner"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.235"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/batu" />
+
+    <TextView
+        android:id="@+id/winner"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="80dp"
+        android:text="@string/strip"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.367"
+        app:layout_constraintStart_toEndOf="@+id/textWinner"
+        app:layout_constraintTop_toBottomOf="@+id/batu" />
+
+    <TextView
+        android:id="@+id/botChoice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/strip"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.434"
+        app:layout_constraintStart_toEndOf="@+id/bot"
+        app:layout_constraintTop_toBottomOf="@+id/winner" />
+
+    <TextView
+        android:id="@+id/textScore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/strip"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.382"
+        app:layout_constraintStart_toEndOf="@+id/score"
+        app:layout_constraintTop_toBottomOf="@+id/botChoice" />
+
+    <TextView
+        android:id="@+id/bot"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/bot"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.218"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textWinner" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="@string/score"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.231"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bot" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

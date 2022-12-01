@@ -1,0 +1,16 @@
+<resources>
+    <string name="app_name">tugas</string>
+    <string name="luas_segitiga">Luas Segitiga</string>
+    <string name="compare">Compare</string>
+    <string name="suit">Suit</string>
+    <string name="angka_2_tinggi">Angka 2 / Tinggi :</string>
+    <string name="operator">Operator:</string>
+    <string name="hasil">Hasil:</string>
+    <string name="strip">-</string>
+    <string name="confirm">Confirm</string>
+    <string name="go_back">Go back</string>
+    <string name="choice">Choice :</string>
+    <string name="winner">Winner :</string>
+    <string name="score">Score :</string>
+    <string name="bot">Bot :</string>
+</resources>

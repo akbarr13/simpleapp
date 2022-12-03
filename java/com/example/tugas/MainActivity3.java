@@ -2,6 +2,7 @@ package com.example.tugas;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,7 +10,10 @@ import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import java.text.BreakIterator;
+
 public class MainActivity3 extends AppCompatActivity {
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,30 +24,30 @@ public class MainActivity3 extends AppCompatActivity {
         Button back, confirm;
         ImageView reset;
         EditText form;
-        TextView hasil, num;
+        TextView hasil;
 
-        num = findViewById(R.id.number);
         reset = findViewById(R.id.reset);
         hasil = findViewById(R.id.hasil);
         back = findViewById(R.id.buttonBack);
         confirm = findViewById(R.id.confirm);
         form = findViewById(R.id.form);
 
+        //Generate number
         java.util.Random random = new java.util.Random();
         int randomChoice = random.nextInt(100);
-        int[] coba = {0};
+        //Initial score
+        final int[] coba = {0};
 
 
-
+        //Reset activity
         reset.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                int randomChoice = random.nextInt(100);
-                int[] coba = {0};
-                hasil.setText("-");
+                restart();
             }
         });
 
+        //Back to main activity
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -52,6 +56,7 @@ public class MainActivity3 extends AppCompatActivity {
             }
         });
 
+        //Submit number
         confirm.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -61,8 +66,7 @@ public class MainActivity3 extends AppCompatActivity {
                 String hintLebih = "Lebih dari " + angka;
                 if (randomChoice == angka){
                     hasil.setText(won);
-                    int randomChoice = random.nextInt(100);
-                    int coba = 0;
+                    restart();
                 } else if (angka < randomChoice){
                     coba[0]++;
                     hasil.setText(hintLebih);
@@ -72,5 +76,13 @@ public class MainActivity3 extends AppCompatActivity {
                 }
             }
         });
+
+    }
+
+    //Restart activity function
+    public void restart(){
+        Intent intent = getIntent();
+        finish();
+        startActivity(intent);
     }
 }
